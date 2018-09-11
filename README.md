@@ -13,7 +13,7 @@
 
 # Starting the server
 
-**Note: you need to have a frozengraph model to server, see the end of this README.**
+**Note: you need to have a frozengraph model inside `./exported-model-frozen` from the previous step**
 
 `FLASK_APP=app.py pipenv run flask run`
 
@@ -32,9 +32,11 @@ name | description
 
 ## Request:
 
+```
 curl --request POST \
   --url http://localhost:5000/predict \
   --form file=@local_file.png
+```
 
 ## Response
 
